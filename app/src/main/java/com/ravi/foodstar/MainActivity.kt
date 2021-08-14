@@ -7,12 +7,16 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.ravi.foodstar.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
+lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         navController = findNavController(R.id.nav_host_fragment)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -21,8 +25,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.jokeFragment
             )
         )
-
-       // bottom.setupWithNavController(navController)
+        binding.bottomNavigationView.setupWithNavController(navController)//setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
     override fun onSupportNavigateUp(): Boolean {
