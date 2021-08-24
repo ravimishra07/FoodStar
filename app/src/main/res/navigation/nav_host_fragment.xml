@@ -8,17 +8,17 @@
 
     <fragment
         android:id="@+id/recipeFragment"
-        android:name="com.ravi.foodstar.RecipeFragment"
+        android:name="com.ravi.foodstar.ui.fragments.recipes.RecipeFragment"
         android:label="fragment_receipe"
         tools:layout="@layout/fragment_receipe" />
     <fragment
         android:id="@+id/favouriteFragment"
-        android:name="com.ravi.foodstar.FavouriteFragment"
+        android:name="com.ravi.foodstar.ui.fragments.favourites.FavouriteFragment"
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourite" />
     <fragment
         android:id="@+id/jokeFragment"
-        android:name="com.ravi.foodstar.JokeFragment"
+        android:name="com.ravi.foodstar.ui.fragments.joke.JokeFragment"
         android:label="fragment_joke"
         tools:layout="@layout/fragment_joke" />
 </navigation>

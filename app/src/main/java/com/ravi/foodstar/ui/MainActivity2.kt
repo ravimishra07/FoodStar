@@ -1,7 +1,8 @@
-package com.ravi.foodstar
+package com.ravi.foodstar.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ravi.foodstar.R
 
 class MainActivity2 : AppCompatActivity() {
     //var bind

@@ -1,13 +1,13 @@
-package com.ravi.foodstar
+package com.ravi.foodstar.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.ravi.foodstar.R
 import com.ravi.foodstar.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
