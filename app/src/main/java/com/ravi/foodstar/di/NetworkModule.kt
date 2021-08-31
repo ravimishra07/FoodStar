@@ -1,7 +1,7 @@
 package com.ravi.foodstar.di
 
 import android.app.Application
-import com.ravi.foodstar.FoodRecipesApi
+import com.ravi.foodstar.data.FoodRecipesApi
 import com.ravi.foodstar.util.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides

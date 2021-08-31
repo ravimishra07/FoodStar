@@ -1,4 +1,4 @@
-package com.example.foody.util
+package com.ravi.foodstar.util
 
 sealed class NetworkResult<T>(
     val data: T? = null,

@@ -1,4 +1,4 @@
-package com.ravi.foodstar
+package com.ravi.foodstar.data
 
 import com.ravi.foodstar.models.FoodRecipe
 import retrofit2.Response
