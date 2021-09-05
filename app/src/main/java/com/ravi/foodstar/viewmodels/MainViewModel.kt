@@ -1,4 +1,4 @@
-package com.ravi.foodstar
+package com.ravi.foodstar.viewmodels
 
 import android.app.Application
 import android.content.Context

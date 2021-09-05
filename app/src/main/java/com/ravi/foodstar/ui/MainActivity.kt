@@ -9,7 +9,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.ravi.foodstar.R
 import com.ravi.foodstar.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
 lateinit var binding: ActivityMainBinding
@@ -17,7 +19,7 @@ lateinit var binding: ActivityMainBinding
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        navController = findNavController(R.id.nav_host_fragment)
+        navController = findNavController(R.id.fragmentContainerView)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.recipeFragment,
