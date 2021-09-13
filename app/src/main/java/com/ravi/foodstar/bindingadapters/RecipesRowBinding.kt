@@ -10,32 +10,32 @@ import com.ravi.foodstar.R
 
 class RecipesRowBinding {
 
-    companion object{
+    companion object {
 
-
-        @BindingAdapter("loadImageFrom")
+        @BindingAdapter("loadImageFromUrl")
         @JvmStatic
-        fun loadImageFromUrl(imageView: ImageView, imageUrl: String){
-            imageView.load(imageUrl){
+        fun loadImageFromUrl(imageView: ImageView, imageUrl: String) {
+            imageView.load(imageUrl) {
                 crossfade(600)
+                error(R.drawable.ic_error_placeholder)
             }
         }
 
         @BindingAdapter("setNumberOfLikes")
         @JvmStatic
-        fun setNumberOfLikes(textview: TextView, likes: Int){
-            textview.text = likes.toString();
+        fun setNumberOfLikes(textView: TextView, likes: Int){
+            textView.text = likes.toString()
         }
 
         @BindingAdapter("setNumberOfMinutes")
         @JvmStatic
-        fun setNumberOfMinutes(textview: TextView, minutes: Int){
-            textview.text = minutes.toString();
+        fun setNumberOfMinutes(textView: TextView, minutes: Int){
+            textView.text = minutes.toString()
         }
 
         @BindingAdapter("applyVeganColor")
         @JvmStatic
-        fun applyVeganColor(view: View, vegan: Boolean){
+        fun applyVeganColor(view: View, vegan: Boolean) {
             if(vegan){
                 when(view){
                     is TextView -> {

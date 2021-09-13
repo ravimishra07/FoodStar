@@ -1,7 +1,6 @@
 package com.ravi.foodstar.di
 
-import android.app.Application
-import com.ravi.foodstar.data.FoodRecipesApi
+import com.example.foody.data.network.FoodRecipesApi
 import com.ravi.foodstar.util.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -16,24 +15,25 @@ import javax.inject.Singleton
 @Module
 @InstallIn(ApplicationComponent::class)
 object NetworkModule {
+
     @Singleton
     @Provides
-    fun provideHttpClient(): OkHttpClient{
+    fun provideHttpClient() : OkHttpClient {
         return OkHttpClient.Builder()
-            .readTimeout(15,TimeUnit.SECONDS)
-            .connectTimeout(15,TimeUnit.SECONDS)
+            .readTimeout(15, TimeUnit.SECONDS)
+            .connectTimeout(15, TimeUnit.SECONDS)
             .build()
     }
 
     @Singleton
     @Provides
-    fun provideConverterFactory(): GsonConverterFactory{
+    fun provideConverterFactory(): GsonConverterFactory {
         return GsonConverterFactory.create()
     }
 
     @Singleton
     @Provides
-    fun provideRetrofitClient(
+    fun provideRetrofitInstance(
         okHttpClient: OkHttpClient,
         gsonConverterFactory: GsonConverterFactory
     ): Retrofit {
@@ -48,6 +48,6 @@ object NetworkModule {
     @Provides
     fun provideApiService(retrofit: Retrofit): FoodRecipesApi {
         return retrofit.create(FoodRecipesApi::class.java)
-
     }
+
 }
