@@ -1,6 +1,6 @@
 package com.ravi.foodstar.di
 
-import com.example.foody.data.network.FoodRecipesApi
+import com.ravi.foodstar.data.network.FoodRecipesApi
 import com.ravi.foodstar.util.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
